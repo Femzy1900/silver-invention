@@ -5,9 +5,9 @@ import FoodCard from './FoodCard';
 
 const MainPage = () => {
   return (
-    <div className='flex flex-col   text-white p-10 '>
+    <div className='flex flex-col w-[833px] text-white p-10 '>
         <div className="flex flex-col gap-[24px] ">
-            <div className="flex gap-[243px] items-center">
+            <div className="flex justify-between items-center">
                 <div className="">
                     <h2 className='text-[28px] font-bold '>Adedokun Femi</h2>
                     <h6 className='font-light font-[16px]'>Tuesday, 10 Jan 2024</h6>

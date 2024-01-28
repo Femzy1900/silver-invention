@@ -6,22 +6,26 @@ import {FaChevronDown} from "react-icons/fa"
 const FoodCard = () => {
   
   return (
-    <div className="">
-        <div className="flex items-center">
-            <p>Choose Dishes</p>
-            <div className="flex items-center rounded-lg p-2 bg-[#1F1D2B]">
+    <div className="flex flex-col gap-6">
+        <div className="flex justify-between items-center">
+            <p className='text-xl'>Choose Dishes</p>
+            <div className="flex  items-center gap-2.5 text-sm rounded-lg p-3.5 bg-[#1F1D2B]">
               <FaChevronDown />
               <p>Dine</p>
             </div>
         </div>
-        {items.map((item) => (
-            <div className="" key={item.id}>
+        <div className="flex flex-wrap">
 
-                <li>{item.title}</li>
-                <img src={item.image} alt="" />
-            </div>
+          {items.map((item) => (
+              <div className="bg-white p-0 m-0 text-center" key={item.id}>
+                  <img className='m-auto' src={item.image} alt="" />
+                  <p>{item.title}</p>
+                  <p>{item.price}</p>
+                  <p>{item.available}</p>
+              </div>
 
-        ))}
+          ))}
+        </div>
     </div>
   )
 }
