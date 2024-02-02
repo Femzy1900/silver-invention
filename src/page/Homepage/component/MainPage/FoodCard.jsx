@@ -14,14 +14,17 @@ const FoodCard = () => {
               <p>Dine</p>
             </div>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap  gap-[28px]">
 
           {items.map((item) => (
-              <div className="bg-white p-0 m-0 text-center" key={item.id}>
-                  <img className='m-auto' src={item.image} alt="" />
-                  <p>{item.title}</p>
-                  <p>{item.price}</p>
-                  <p>{item.available}</p>
+              <div className=" bg-[#1F1D2B] rounded-xl w-[230px] h-[260px]" key={item.id}>
+                  <img className='m-auto mt-2 rounded-full' src={item.image} alt="" />
+                <div className="bg-transparent text-center m-auto pt-4  w-[144px] text-[14px]">
+
+                  <p className='bg-inherit'>{item.title}</p>
+                  <p className='bg-inherit font-thin '>{item.price}</p>
+                  <p className='bg-inherit font-extralight text-[12px]'>{item.available}</p>
+                </div>
               </div>
 
           ))}
