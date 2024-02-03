@@ -18,13 +18,13 @@ const Order = () => {
           <p>Price</p>
         </div>
       </div>
-      <div className="py-4 h-[450px] overflow-auto">
+      <div className="Scrollbar py-4 h-[460px] overflow-auto scrollbar-hidden">
       {items.map((item) => (
               <div className="flex flex-col gap-2">
           
                 <div className="flex items-center gap-10 " key={item.id}>
                     <img className=' w-[40px] rounded-full' src={item.image} alt="" />
-                    <div className="flex  items-center text-start flex-col w-[130px]">
+                    <div className="flex  items-center text-start flex-col w-[110px]">
                       <p className='text-[12px]'>{item.title}</p>
                       <p className='text-[10px] font-thin '>{item.price}</p>
                     </div>
@@ -43,17 +43,17 @@ const Order = () => {
               </div> 
         ))}
       </div>
-      <div className="flex flex-col">
+      <div className="flex gap-4 flex-col">
         <div className="flex justify-between">
-          <p>Discount</p>
-          <p>$0</p>
+          <p className='font-thin text-[12px]'>Discount</p>
+          <p >$0</p>
         </div>
         <div className="flex justify-between">
-          <p>Subtotal</p>
+          <p className='font-thin text-[12px]'>Subtotal</p>
           <p>$21.03</p>
         </div>
       </div>
-      <button className='bg-[#EA7C69] p-2 rounded-md'>Continue to Payment</button>
+      <button className='bg-[#EA7C69] p-3 text-[14px] mt-3 rounded-md'>Continue to Payment</button>
     </div>
   )
 }
