@@ -18,20 +18,26 @@ const Order = () => {
         </div>
       </div>
       <div className="py-4">
-        <div className="">
-          {items.map((item) => (
-                <div className=" bg-[#1F1D2B] rounded-xl w-[230px] h-[260px]" key={item.id}>
-                    <img className='m-auto mt-2 rounded-full' src={item.image} alt="" />
-                  <div className="bg-transparent text-center m-auto pt-4  w-[144px] text-[14px]">
-
-                    <p className='bg-inherit'>{item.title}</p>
-                    <p className='bg-inherit font-thin '>{item.price}</p>
-                    <p className='bg-inherit font-extralight text-[12px]'>{item.available}</p>
-                  </div>
+      {items.map((item) => (
+              <div className="flex flex-col gap-2">
+          
+                <div className="flex items-center gap-10 " key={item.id}>
+                    <img className=' w-[40px] rounded-full' src={item.image} alt="" />
+                    <div className="flex  items-center text-start flex-col w-[130px]">
+                      <p className='text-[12px]'>{item.title}</p>
+                      <p className='text-[10px] font-thin '>{item.price}</p>
+                    </div>
+                    <p className='flex-1 text-center rounded-md py-3 bg-[#393C49]'>2</p>
+                    <p className='text-[13px]'>$ 4.58</p>
+                    
                 </div>
-
-            ))}
-        </div>
+              
+                <div className="flex items-center gap-11 mb-4">
+                  <input className='h-[40px] rounded-md bg-[#393C49] flex-1 text-[12px] pl-4' type="text" placeholder='Order Note...' />
+                  <p>Hel</p>
+                </div>
+              </div> 
+        ))}
       </div>
     </div>
   )
