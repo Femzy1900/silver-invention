@@ -4,7 +4,7 @@ import Order from './component/Order.jsx'
 
 const Homepage = () => {
   return (
-    <div className='flex bg-[#252836]'>
+    <div className='flex bg-[#252836] '>
       <MainPage />
       <Order />
     </div>

@@ -18,7 +18,7 @@ const Order = () => {
           <p>Price</p>
         </div>
       </div>
-      <div className="py-4">
+      <div className="py-4 h-[450px] overflow-auto">
       {items.map((item) => (
               <div className="flex flex-col gap-2">
           
@@ -38,10 +38,22 @@ const Order = () => {
                   <div className='items-center justify-center text-center rounded-md border-[#EA7C69] border-[2px] p-3'>
                     <FaTrash className='text-[#EA7C69]'  />
                   </div>
+                  
                 </div>
               </div> 
         ))}
       </div>
+      <div className="flex flex-col">
+        <div className="flex justify-between">
+          <p>Discount</p>
+          <p>$0</p>
+        </div>
+        <div className="flex justify-between">
+          <p>Subtotal</p>
+          <p>$21.03</p>
+        </div>
+      </div>
+      <button className='bg-[#EA7C69] p-2 rounded-md'>Continue to Payment</button>
     </div>
   )
 }
