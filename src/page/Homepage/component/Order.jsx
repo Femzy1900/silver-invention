@@ -1,8 +1,18 @@
 import React from 'react'
 import { items } from '../../../data/db'
 import {FaTrash} from "react-icons/fa"
+import { useNavigate } from 'react-router-dom'
 
 const Order = () => {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/payment')
+  }
+
+
+
   return (
     <div className='flex p-[24px] text-white flex-col gap-4 w-[410px] bg-[#1F1D2B] '>
       <div className="flex flex-col gap-6">
@@ -35,7 +45,7 @@ const Order = () => {
               
                 <div className="flex items-center gap-8 mb-4">
                   <input className='h-[40px] rounded-md bg-[#393C49] flex-1 text-[12px] pl-4' type="text" placeholder='Order Note...' />
-                  <div className='items-center justify-center text-center rounded-md border-[#EA7C69] border-[2px] p-3'>
+                  <div className='items-center justify-center text-center rounded-md border-[#EA7C69] border-[2px] p-2'>
                     <FaTrash className='text-[#EA7C69]'  />
                   </div>
                   
@@ -53,7 +63,8 @@ const Order = () => {
           <p>$21.03</p>
         </div>
       </div>
-      <button className='bg-[#EA7C69] p-3 text-[14px] mt-3 rounded-md'>Continue to Payment</button>
+      
+      <button onClick={handleButtonClick} className='bg-[#EA7C69] p-3 text-[14px] mt-3 rounded-md'>Continue to Payment</button>
     </div>
   )
 }
