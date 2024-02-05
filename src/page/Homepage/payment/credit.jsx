@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaCreditCard, FaPaypal, FaWallet} from "react-icons/fa"
 
 const Credit = () => {
   return (
@@ -10,12 +11,25 @@ const Credit = () => {
             </div>
             
         </div>
-        <div className="flex flex-col p-6">
+        <div className="flex flex-col p-6 gap-3">
             <h1>Payment Method</h1>
-            <div className="flex">
-                <div className="">
-                    
+            <div className="flex gap-3 ">
+                <div className=" flex flex-col justify-center items-center border rounded-lg py-2 px-4 text-center bg-[#252836] gap-1 ">
+                    <FaCreditCard size={20}/>
+                    <p className='text-[12px] font-thin'>Credit Card</p>
                 </div>
+                <div className="  flex flex-col justify-center items-center border-2 rounded-lg py-2 px-7 text-center border-[#252836] gap-1 ">
+                    <FaPaypal />
+                    <p className='text-[12px] font-thin'>Paypal</p>
+                </div>
+                <div className="  flex flex-col justify-center items-center border-2 rounded-lg py-2 px-7 text-center border-[#252836] gap-1 ">
+                    <FaWallet />
+                    <p className='text-[12px] font-thin'>Cash</p>
+                </div>
+            </div>
+            <div className="flex flex-col">
+                <label htmlFor="">Cardholder Name</label>
+                <input type="text" placeholder='Adedokun Femi' />
             </div>
         </div>
     </div>
