@@ -45,7 +45,7 @@ const Order = () => {
               
                 <div className="flex items-center gap-8 mb-4">
                   <input className='h-[40px] rounded-md bg-[#393C49] flex-1 text-[12px] pl-4' type="text" placeholder='Order Note...' />
-                  <div className='items-center justify-center text-center rounded-md border-[#EA7C69] border-[2px] p-'>
+                  <div className='items-center justify-center text-center rounded-md border-[#EA7C69] border-[2px] p-3'>
                     <FaTrash className='text-[#EA7C69]'  />
                   </div>
                   

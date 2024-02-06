@@ -4,6 +4,7 @@ import { items } from '../../../data/db'
 import {FaTrash} from "react-icons/fa"
 import { FaArrowLeft } from 'react-icons/fa'
 import Credit from './credit'
+import { Link } from 'react-router-dom'
 
 
 const Payment = () => {
@@ -16,7 +17,9 @@ const Payment = () => {
         <div className=" text-white top-0 left-[345px] h-full justify-between rounded-l-lg  flex absolute w-[900px] bg-[#1F1D2B]">
           
           <div className="border-r-2 border-[#252836] basis-1/2 p-6">
-            <FaArrowLeft />
+            <Link to="/">
+              <FaArrowLeft />
+            </Link>
             <div className="flex items-center justify-between p-4 border-b-2 border-[#252836]">
               <div className="flex gap-2  flex-col">
                 <p className='text-[24px] font-semibold'>Confirmation</p>
